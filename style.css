@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+header {
+    font-family: 'Pacifico', cursive;
+    color: #3d84b8;
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    box-shadow: 2px 2px 5px rgba(61, 132, 184, 0.5);
+}
+
+/* Heading */
+header h2 {
+    margin: auto 100px;
+    box-sizing: border-box;
+}
+nav ul {    
+    margin: 20px 100px;
+    display: flex;
+}
+nav ul li {
+    width: 100px;
+    list-style: none;
+}
+nav ul li a {
+    padding: 5px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+nav ul li a:hover {
+    color: white;
+    background-color: #3d84b8;
+    border-radius: 5px;
+}
+/* Main */
+main {
+    /* background-color: #C0FEFC; */
+    height: 100%;
+}
+
+/* CONTENT */
+#content {
+    border-radius: 0 0 10px 10px;
+    background-image: url('img/bali.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;    
+    justify-content: space-between;
+    padding: 100px 150px 100px 20px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+#content article {
+    color: #FFF;
+    text-shadow: 2px 2px 5px rgba(61, 132, 184, 0.9);
+    padding: 100px;
+    line-height: 70px;
+}
+#content article h1 {
+    font-size: 50px;
+    font-family: 'Pacifico', cursive;
+}
+#content article p {
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+aside {
+    margin-top: 50px;
+}
+aside .main-img {
+    width: 400px;
+    border-radius: 30px;
+    border: 3px solid #FFF;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* About */
+#about {
+    background-color: #FFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 60px 200px 80px 200px;
+}
+#about article {
+    font-size: 1.8em;
+    margin-top: 120px;
+}
+aside .profile-img {
+    width: 200px;
+    border-radius: 50%;
+    border: 5px solid #C0FEFC;
+}
+aside h3 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+}
+
+/* Gallery */
+#gallery {
+    margin-top: 50px;
+    border-radius: 20px 20px 0 0;
+    padding: 70px 100px;
+    display: grid;
+    background-color: #C0FEFC;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 30px;
+    box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.3);
+}
+#gallery h1{
+    grid-column: 1 / -1;
+    margin-bottom: 15px;
+    text-align: center;
+}
+#gallery img {
+    display: grid;
+    place-self: center center;
+}
+
+footer {
+    padding: 15px;
+    background-color: #000;
+    color: white;
+    text-align: center;
+}
+
+/* MEDIA QUERY */
+/* Ukuran HP */
+@media screen and (max-width: 576px){
+    
+    header h2 {
+        display: none;
+    }
+    nav ul li {
+        width: 60px;
+        padding: 10 ;
+        margin-left: 50px;
+        list-style: none;
+    }
+    #content {
+        line-height: 5px;
+        flex-direction: column;
+        text-align: center;
+    }
+    #content article {
+        margin-left: 100px;
+        text-align: center;
+    }
+    #content article h1 {
+        font-size: 40px;
+    }
+    #content article p {
+        font-size: 30px;
+    }
+    #content aside {
+        padding: 80px;
+    }
+    aside .main-img {
+        width: 250px;
+    }    
+    #about {
+        flex-direction: column;
+        padding: 60px 10px 80px 10px;
+        text-align: center;
+    }
+    #about article {
+        font-size: 1.2em;
+        margin-top: 100px;
+    }
+    aside .profile-img {
+        margin-top: 20px;
+        width: 10px;
+    }
+    aside h3 {
+        font-family: 'Roboto', sans-serif;
+        font-style: italic;
+    }
+    /* Gallery */
+    #gallery {
+        margin-top: 50px;
+        padding: 70px 10px;
+        grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+        gap: 5px;
+    }
+    #gallery h1{
+        grid-column: 1 / -1;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    #gallery img {
+        display: grid;
+        place-self: center center;
+    }
+}
+
+/* Ukuran Tablet */
+@media screen and (max-width: 768px){
+    header h2 {
+        margin: auto 70px;
+        box-sizing: border-box;
+    }
+    nav ul {    
+        margin: 20px 40px;
+        display: flex;
+    }
+    nav ul li {
+        width: 100px;
+        list-style: none;
+    }
+    #content {
+        /* line-height: 5px; */
+        padding: 0px 00px 10px 0px;
+    }
+    #content article {
+        /* text-align: center; */
+        padding: 40px;
+    }
+    #content article h1 {
+        font-size: 20px;
+    }
+    #content article p {
+        font-size: 20px;
+    }
+    aside {
+        margin-top: 250px;
+    }
+    aside .main-img {
+        width: 100px;
+    }
+    #about {
+        flex-direction: column;
+        padding: 60px 10px 80px 10px;
+        text-align: center;
+    }
+    #about article {
+        font-size: 1.2em;
+        margin-top: 50px;
+    }
+    /* aside {
+        margin-top: 30px;
+    } */
+    aside .profile-img {
+        width: 200px;
+    }
+    aside h3 {
+        font-family: 'Roboto', sans-serif;
+        font-style: italic;
+    }
+}
+
+/* Ukuran Desktop */
+@media screen and (max-width: 992px){
+    #content {
+        padding: 50px 100px 60px 0px;
+    }
+    #content article h1 {
+        margin-top: 0;
+        font-size: 45px;
+    }
+    #content article p {
+        font-size: 30px;
+    }
+    aside {
+        margin-top: 150px;
+    }
+    aside .main-img {
+        width: 300px;
+    }
+    #about article {
+        font-size: 23px;
+        margin-top: 100px;
+    }
+    aside {
+        margin-top: 50px;
+    }
+    aside .profile-img {
+        width: 200px;
+    }
+    aside h3 {
+        font-family: 'Roboto', sans-serif;
+        font-style: italic;
+    }
+}
+
